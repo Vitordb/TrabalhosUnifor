@@ -1,0 +1,17 @@
+
+<h2>Meus herois</h2>
+
+
+<ul class="heroes">
+    
+<li *ngFor="let calopsita of variavelHeroes" [class.selected]="calopsita === selectedHero" (click)="onSelect(calopsita)">
+    <span class="badge">{{calopsita.id}}</span> {{calopsita.name}}
+</li>
+
+</ul>
+
+
+<app-hero-detail [VariavelHeroiDetalhado]="selectedHero"></app-hero-detail>
+
+
+
